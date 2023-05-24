@@ -1,6 +1,6 @@
 require('dotenv').config();
 const axios = require('axios');
-const { CLIENT_URL } = process.env
+const { CLIENT_URL, APP_SERVER_URL } = process.env
 //set port to value specified by .ENV if it exists otherwise set to 8080
 const PORT = process.env.PORT || 8000;
 const { Server } = require('socket.io');
@@ -60,7 +60,7 @@ io.on('connection', (socket) => {
     socket.emit('chatroom_users', chatRoomUsers);
 
     axios
-      .get(`http://localhost:8000/chat/${room}`)
+      .get(`${APP_SERVER_URL}/chat/${room}`)
       .then((res) => {
         let last100Messages = JSON.stringify(res.data)
         socket.emit('last_100_messages', last100Messages);
