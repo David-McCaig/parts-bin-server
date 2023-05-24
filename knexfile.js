@@ -8,7 +8,6 @@ DB_USER,
 DB_PASSWORD,
 DB_DATABASE
 } = process.env
-console.log(DB_DATABASE)
 
  module.exports = {
   client: 'mysql',
