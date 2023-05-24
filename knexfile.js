@@ -20,10 +20,10 @@ console.log(DB_DATABASE)
     charset: 'utf8',
   },
   migrations: {
-    directory: './',
+    directory: './migrations',
   },
   seeds: {
-    directory: '/Users/user/Desktop/BrainStation/projects/parts-bin/parts-bin/server/seeds',
+    directory: './seeds',
   }
 };
 
