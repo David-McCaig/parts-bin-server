@@ -100,7 +100,7 @@ app.get('/', (_req, res) => {
 });
 
 //start server and listens on port specified in .env
-server.listen(PORT, () => {
+app.listen(PORT, () => {
   console.log(`running at http://localhost:${PORT}`);
 });
 
