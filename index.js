@@ -95,6 +95,10 @@ io.on('connection', (socket) => {
   });
 });
 
+app.get('/', (_req, res) => {
+  res.send("Welcome to my API");
+});
+
 //start server and listens on port specified in .env
 server.listen(PORT, () => {
   console.log(`running at http://localhost:${PORT}`);
