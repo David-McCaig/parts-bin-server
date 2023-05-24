@@ -2,7 +2,7 @@ require('dotenv').config();
 const axios = require('axios');
 const { CLIENT_URL } = process.env
 //set port to value specified by .ENV if it exists otherwise set to 8080
-const PORT = process.env.DB_LOCAL_PORT || 8000;
+const PORT = process.env.PORT || 8000;
 const { Server } = require('socket.io');
 
 //Import user and product router
@@ -96,11 +96,11 @@ io.on('connection', (socket) => {
 });
 
 app.get('/', (_req, res) => {
-  res.send("Welcome to my API");
-});
+    res.send("Welcome to my API");
+  });
 
 //start server and listens on port specified in .env
-app.listen(PORT, () => {
+server.listen(PORT, () => {
   console.log(`running at http://localhost:${PORT}`);
 });
 
