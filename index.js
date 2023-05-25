@@ -16,7 +16,9 @@ const app = express();
 
 //Import cors. Apply to app object.
 const cors = require('cors');
-app.use(cors());
+app.use(cors({
+  origin: 'https://646ef33dc833840008f90d54--imaginative-sfogliatella-45400a.netlify.app'
+}));
 
 //Set public folder as static folder for serving files.
 app.use(express.static('public'));
