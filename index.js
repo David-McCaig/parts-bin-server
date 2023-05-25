@@ -37,7 +37,7 @@ function leaveRoom(userID, chatRoomUsers) {
 
 const io = new Server(server, {
   cors: {
-    origin: 'https://imaginative-sfogliatella-45400a.netlify.app/',
+    origin: '*',
     methods: ['GET', 'POST'],
   },
 });
