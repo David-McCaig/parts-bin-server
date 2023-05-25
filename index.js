@@ -16,9 +16,7 @@ const app = express();
 
 //Import cors. Apply to app object.
 const cors = require('cors');
-app.use(cors({
-  origin: 'https://646ef33dc833840008f90d54--imaginative-sfogliatella-45400a.netlify.app'
-}));
+app.use(cors());
 
 //Set public folder as static folder for serving files.
 app.use(express.static('public'));
@@ -39,7 +37,7 @@ function leaveRoom(userID, chatRoomUsers) {
 
 const io = new Server(server, {
   cors: {
-    origin: CLIENT_URL,
+    origin: 'https://646ef33dc833840008f90d54--imaginative-sfogliatella-45400a.netlify.app',
     methods: ['GET', 'POST'],
   },
 });
