@@ -108,10 +108,10 @@
       },
       {
         id: 'dd14bfe1-5a3e-4233-9cd5-92f1f4ad4676',
-        item_name: 'Ritchey No Serial',
+        item_name: 'Santa Cruz',
         description:'I have a Ritchey No Serial mtb for sale. Frame is a Large. Didnt really use it much. Bike is in immaculate condition. Suspension works amazing, shifts amazing. Great all around mountain bike.',
         category: 'Bikes',
-        image_path:'https://partsbin.herokuapp.com/images/1980-Ritchey-No-Serial-2.jpg',
+        image_path:'https://partsbin.herokuapp.com/images/Santa-Cruz-Bicycles-Chameleon-27.5-Hardtail-5.jpg',
         price: '$2400',
         user_name: 'Karen Stafford',
         user_email: 'karen@gmail.com',
