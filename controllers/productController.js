@@ -82,7 +82,7 @@ const addProductItem = async (req, res) => {
         description: req.body.description,
         category: req.body.category,
         price: req.body.price,
-        image_path: `https://partsbin.herokuapp.com/images/${req.file.filename}`,
+        image_path: `http://localhost:8000/images/${req.file.filename}`,
         user_email: req.body.user_email,
         user_name: req.body.user_name
       });

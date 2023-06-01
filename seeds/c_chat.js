@@ -16,7 +16,7 @@
       },
       {
         id: '25131af4-11dc-4221-a74e-50e5a9531bd0',
-        product_id: 'ce9c3ecf-c766-4421-b70e-3e79a485bfa3',
+        product_id: 'bdc6bb69-e09c-498d-8abd-be2792504d00',
         message: 'Hi, is this still available',
         room: 'd83507e9-f103-4a1e-9231-44e97b3c297d',
         user_name: 'Jason Data',
@@ -24,11 +24,19 @@
       },
       {
         id: '97cb082b-621a-494c-bae6-34f8723433db',
-        product_id: '48aa03d1-8fae-4979-87f8-31798a29d9f5',
+        product_id: 'f3e13429-b5e9-4a50-b01c-75fb07cefced',
         message: 'Hi, is this still available',
         room: 'caed0924-c9c1-4bed-bec3-458c708668f1',
         user_name: 'Brock Kelly',
         email: 'brock@gmail.com',
+      },
+      {
+        id: 'f5583257-e222-4d78-b0fd-046c5f5b5934',
+        product_id: 'a193a6a7-42ab-4182-97dc-555ee85e7486',
+        message: 'Hi, is this still available',
+        room: '0e3c1f18-fe0e-48eb-8473-d9bcf6c32f80',
+        user_name: 'Gerry Roach',
+        email: 'gerry@gmail.com',
       },
     ]);
   };

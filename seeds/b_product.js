@@ -33,8 +33,8 @@
         category: 'Bikes',
         image_path:'https://partsbin.herokuapp.com/images/DSC7556.jpg',
         price: '$3500',
-        user_name: 'Dave',
-        user_email: 'dave@gmail.com',
+        user_name: 'Brock Kelly',
+        user_email: 'brock@gmail.com',
       },
       {
         id: '8f16bd30-bab5-40af-aca2-b63d5fdd1acc',
@@ -73,8 +73,8 @@
         category: 'Bikes',
         image_path:'https://partsbin.herokuapp.com/images/The-Dreamiest-Hardtail-a-Review-of-the-Moots-Womble-1.jpg',
         price: '$5200',
-        user_name: 'Sean Rathbun',
-        user_email: 'sean@gmail.com',
+        user_name: 'Serena Pardy',
+        user_email: 'serena@gmail.com',
       },
       {
         id: 'c04acf73-4a31-4e80-854e-5daaebc05fe0',

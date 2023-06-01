@@ -8,7 +8,7 @@
     await knex('user').insert([
       {
         id: '2922c286-16cd-4d43-ab98-c79f698aeab0',
-        customer_name: 'Frank ',
+        customer_name: 'Frank',
         email: 'frank@gmail.com',
         phone: '416 316 8892',
         address: '294 St Clarens ave',
