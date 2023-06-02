@@ -3,6 +3,7 @@ const db = require("knex")(knexConfig);
 const uuid4 = require("uuid4");
 const path = require('path')
 const multer = require('multer')
+const { APP_SERVER_URL } = process.env
 
 //Configure multer to handle photo uploads.
 const storage = multer.diskStorage({
@@ -82,7 +83,7 @@ const addProductItem = async (req, res) => {
         description: req.body.description,
         category: req.body.category,
         price: req.body.price,
-        image_path: `http://localhost:8000/images/${req.file.filename}`,
+        image_path: `${APP_SERVER_URL}/images/${req.file.filename}`,
         user_email: req.body.user_email,
         user_name: req.body.user_name
       });
