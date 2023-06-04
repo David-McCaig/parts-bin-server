@@ -3,19 +3,24 @@ const db = require("knex")(knexConfig);
 const uuid4 = require("uuid4");
 const path = require('path')
 const multer = require('multer')
-const { APP_SERVER_URL } = process.env
+const cloudinary = require("cloudinary").v2;
+const { CloudinaryStorage } = require("multer-storage-cloudinary");
+const { CLOUD_NAME, API_KEY, API_SECRET } = process.env
 
-//Configure multer to handle photo uploads.
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, 'public/images')
+cloudinary.config({
+  cloud_name: CLOUD_NAME,
+  api_key: API_KEY,
+  api_secret: API_SECRET,
+});
+
+const storage = new CloudinaryStorage({
+  cloudinary: cloudinary,
+  params: {
+    folder: "parts-bin",
   },
-  filename: (req, file, cb) => {
-    cb(null, Date.now() + '-' + file.originalname)
-  }
-})
+});
 
-const upload = multer({ storage: storage })
+const upload = multer({ storage: storage });
 
 //Handler function to retrieve all products from database.
 const getAllProduct = async (_req, res) => {
@@ -56,6 +61,7 @@ const addProductItem = async (req, res) => {
   // handle image upload
   upload.single('imageFile')(req, res, async (err) => {
     //if missing required fields send 400 message.
+
     if (
       !req.body.item_name ||
       !req.body.description ||
@@ -83,7 +89,7 @@ const addProductItem = async (req, res) => {
         description: req.body.description,
         category: req.body.category,
         price: req.body.price,
-        image_path: `${APP_SERVER_URL}/images/${req.file.filename}`,
+        image_path: req.file.path,
         user_email: req.body.user_email,
         user_name: req.body.user_name
       });
@@ -93,7 +99,8 @@ const addProductItem = async (req, res) => {
       console.log(error);
       res.status(500).json({ error: error });
     }
-  })
+  }
+  )
 };
 
 //handler function to get product by ID
