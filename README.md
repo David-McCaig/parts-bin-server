@@ -28,6 +28,7 @@ HTML5,CSS3,SASS,Javascript,React,NodeJS, Ant Design, Tailwind
 
 **Server:**
 NodeJS, Express, MySQL, knex, Cloudinary, Socket.IO
+
 [![My Skills](https://skillicons.dev/icons?i=nodejs,express,mysql)](https://skillicons.dev)
 
 ## Environment Variables
