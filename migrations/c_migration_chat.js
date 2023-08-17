@@ -10,6 +10,7 @@
       .references('product.id')
       .onUpdate('CASCADE')
       .onDelete('CASCADE');
+      table.string('user_id').notNullable();
       table.string('message').notNullable();
       table.string('room').notNullable();
       table.string('user_name').notNullable();
