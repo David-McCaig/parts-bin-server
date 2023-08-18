@@ -5,7 +5,7 @@
  exports.up = function (knex) {
     return knex.schema.createTable('product', (table) => {
       table.uuid('id').primary();
-      table.string('user_id').notNullable();
+      table.string('public_id').notNullable();
       table.string('item_name').notNullable();
       table.string('description').notNullable();
       table.string('category').notNullable();

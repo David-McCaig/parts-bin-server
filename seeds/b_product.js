@@ -8,7 +8,7 @@
     await knex('product').insert([
       {
         id: '2922c286-16cd-4d43-ab98-c79f698aeab0',
-        user_id: '90ac3319-70d1-4a51-b91d-ba6c2464408c',
+        public_id: '4e26bde8-cf80-4485-a437-56c1c5f1f730',
         item_name: 'Breezer Series III',
         description:'Breezer Series III Full fox set up 26 inch wheels Fox fork and fox shock Spank grips Upgraded flat pedals Size medium Shimano brakes Brand new sram nx chain Really good condition.',
         category: 'Bikes',
@@ -19,7 +19,7 @@
       },
       {
         id: '9b4f79ea-0e6c-4e59-8e05-afd933d0b3d4',
-        user_id: '2922c286-16cd-4d43-ab98-c79f698aeab0',
+        public_id: '5cd8e88c-c1af-42c5-afed-a8dd128963b1',
         item_name: 'Santa Cruz Nomad 2',
         description:'I have a Santa Cruz mtb for sale. Frame is a Large. Didnt really use it much. Bike is in immaculate condition. Suspension works amazing, shifts amazing. Great all around mountain bike.',
         category: 'Bikes',
@@ -30,7 +30,7 @@
       },
       {
         id: 'a193a6a7-42ab-4182-97dc-555ee85e7486',
-        user_id: 'bfc9bea7-66f1-44e9-879b-4d363a888eb4',
+        public_id: 'e178fe29-3105-49cb-bc7a-f42ac8ce8e56',
         item_name: 'Giant Reign Advanced pro med',
         description:'Breezer Series III Full fox set up 26 inch wheels Fox fork and fox shock Spank grips Upgraded flat pedals Size medium Shimano brakes Brand new sram nx chain Really good condition.',
         category: 'Bikes',
@@ -41,7 +41,7 @@
       },
       {
         id: '8f16bd30-bab5-40af-aca2-b63d5fdd1acc',
-        user_id: '5bf7bd6c-2b16-4129-bddc-9d37ff8539e9',
+        public_id: 'e9dfdd40-ee48-4710-8d5f-90bbdfcb16c3',
         item_name: 'Ritchey Tamalpais',
         description:'I have a Ritchey Tamalpais mtb for sale. Frame is a Large. Didnt really use it much. Bike is in immaculate condition. Suspension works amazing, shifts amazing. Great all around mountain bike.',
         category: 'Bikes',
@@ -52,7 +52,7 @@
       },
       {
         id: 'bdc6bb69-e09c-498d-8abd-be2792504d00',
-        user_id: 'bfc9bea7-66f1-44e9-879b-4d363a888eb4',
+        public_id: 'e178fe29-3105-49cb-bc7a-f42ac8ce8e56',
         item_name: 'Otis Guy Braunstein',
         description:'This is a large Otis Guy Braunstein process in very good condition has upgraded charger 2.1 damper in fork and upgraded 170mm pnw dropper. Also upgraded to 35mm rise race face atlas bars.',
         category: 'Bikes',
@@ -63,7 +63,7 @@
       },
       {
         id: 'f3e13429-b5e9-4a50-b01c-75fb07cefhed',
-        user_id: '89898957-04ba-4bd0-9f5c-a7aea7447963',
+        public_id: 'c5b2efd3-702e-48e6-b72e-0d4a1a53670f',
         item_name: 'Cunningham mtb',
         description:'This is a med cunningham in very good condition has upgraded charger 2.1 damper in fork and upgraded 170mm pnw dropper. Also upgraded to 35mm rise race face atlas bars.',
         category: 'Bikes',
@@ -74,7 +74,7 @@
       },
       {
         id: 'f3e13429-b5e9-4a50-b01c-75fb07cefced',
-        user_id: 'bb1491eb-30e6-4728-a5fa-72f89feaf622',
+        public_id: 'fa62dc86-29f2-4590-b04d-4299f92a54ea',
         item_name: 'Moots Womble 29er',
         description:'I have a Moots Womble 29er mtb for sale. Frame is a Large. Didnt really use it much. Bike is in immaculate condition. Suspension works amazing.',
         category: 'Bikes',
@@ -85,7 +85,7 @@
       },
       {
         id: 'c04acf73-4a31-4e80-854e-5daaebc05fe0',
-        user_id: 'bb1491eb-30e6-4728-a5fa-72f89feaf622',
+        public_id: 'fa62dc86-29f2-4590-b04d-4299f92a54ea',
         item_name: 'Otto bike',
         description:'I have a Santa Cruz mtb for sale. Frame is a Large. Didnt really use it much. Bike is in immaculate condition. Suspension works amazing, shifts amazing. Great all around mountain bike.',
         category: 'Bikes',
@@ -96,7 +96,7 @@
       },
       {
         id: '96a5bb6d-344f-4498-984a-5830e80c43b3',
-        user_id: '1f4a5687-be2a-4508-a2cd-7e039c0122a5',
+        public_id: '1f4a5687-be2a-4508-a2cd-7e039c0122a5',
         item_name: 'Oddity bike',
         description:'I have a Santa Cruz mtb for sale. Frame is a Large. Didnt really use it much. Bike is in immaculate condition. Suspension works amazing, shifts amazing. Great all around mountain bike.',
         category: 'Bikes',
@@ -107,7 +107,7 @@
       },
       {
         id: 'dd861000-340d-4813-b911-102927588978',
-        user_id: '90ac3319-70d1-4a51-b91d-ba6c2464408c',
+        public_id: '4e26bde8-cf80-4485-a437-56c1c5f1f730',
         item_name: 'WZRD Bikes',
         description:'I have a WZRD mtb for sale. Frame is a Large. Didnt really use it much. Bike is in immaculate condition. Suspension works amazing, shifts amazing. Great all around mountain bike.',
         category: 'Bikes',
@@ -118,7 +118,7 @@
       },
       {
         id: 'dd14bfe1-5a3e-4233-9cd5-92f1f4ad4676',
-        user_id: 'f4f1ac25-403a-4d6d-bdd3-a502026d5fff',
+        public_id: '9a625e0f-ee00-4253-94e2-072e25b5b37d',
         item_name: 'Santa Cruz',
         description:'I have a Ritchey No Serial mtb for sale. Frame is a Large. Didnt really use it much. Bike is in immaculate condition. Suspension works amazing, shifts amazing. Great all around mountain bike.',
         category: 'Bikes',
@@ -129,7 +129,7 @@
       },
       {
         id: '3b16f79c-4efd-43ee-8ec4-a65439d5fe5e',
-        user_id: 'd6984fbf-224f-4db5-8778-0c0e37a034a2',
+        public_id: 'b555d692-dd4d-46a4-9d32-51f636f94f0c',
         item_name: 'Crust Bikes',
         description:'Crust Bikes in excellent condition \ santa cruz reserve 30 wheelset carbon sram brakes sram xo1 groupset gold chainring absolute black oval fox performance fork 160mm cash or pick up at 90720',
         category: 'Bikes',
@@ -140,7 +140,7 @@
       },
       {
         id: '2b80c241-0e52-491a-9cc0-5edd7f9be491',
-        user_id: '90ac3319-70d1-4a51-b91d-ba6c2464408c',
+        public_id: '4e26bde8-cf80-4485-a437-56c1c5f1f730',
         item_name: 'Ignite Inferno crank',
         description:'New take-off GX DUB crankset with boost spaced 30t X-Sync chainring and 175mm arms. Bottom bracket not included. Has bit of shop wear as shown in one pic.',
         category: 'Components',
@@ -151,7 +151,7 @@
       },
       {
         id: 'e99d0411-0245-4cc4-93d0-150026718a0b',
-        user_id: '12969746-4b1c-4f51-8e49-1a4c535423f8',
+        public_id: 'e2524b24-a3a1-4c45-a313-86009c9298fb',
         item_name: 'Fox dropper seatpost',
         description:'FOX Transfer Factory Dropper Seatpost 31.6, 200 mm, Internal Routing, Kashima Coat Upper The dropper is brand new.',
         category: 'Components',
@@ -162,7 +162,7 @@
       },
       {
         id: '7df72176-7064-4c9b-adc7-c406e3da0b47',
-        user_id: '90ac3319-70d1-4a51-b91d-ba6c2464408c',
+        public_id: '4e26bde8-cf80-4485-a437-56c1c5f1f730',
         item_name: 'Wolftooth stainless ss cog',
         description:'I have two new Wolftooth stainless steel singlespeed cogs for sale. Both are brand new and never used. Bought these for a bike that Im selling',
         category: 'Components',
@@ -173,7 +173,7 @@
       },
       {
         id: 'bb959b3f-4d46-4bbc-b3e1-f213cf765a65',
-        user_id: '26f54a7c-4e6b-4073-b487-cbfb6c018c2f',
+        public_id: 'afd939f5-d4d6-4b6b-a553-6c3190250f4c',
         item_name: 'Pair of MKS pedals',
         description:'I have a set of mks pedals. Both are brand new and never used. Bought these for a bike that Im selling still running smooth. DM me for details',
         category: 'Components',
@@ -184,7 +184,7 @@
       },
       {
         id: 'ce9c3ecf-c766-4421-b70e-3e79a485bfa3',
-        user_id: '90ac3319-70d1-4a51-b91d-ba6c2464408c',
+        public_id: '4e26bde8-cf80-4485-a437-56c1c5f1f730',
         item_name: 'Paul Canti brakes',
         description:'The Touring Canti is a powerful cantilever brake with a similar design to the Neo-Retro, but with the arms angled upward.',
         category: 'Components',
@@ -195,7 +195,7 @@
       },
       {
         id: '48aa03d1-8fae-4979-87f8-31798a29d9f5',
-        user_id: '90ac3319-70d1-4a51-b91d-ba6c2464408c',
+        public_id: '4e26bde8-cf80-4485-a437-56c1c5f1f730',
         item_name: 'Wolf Tooth Stem',
         description:'Bring your bars up high and close with the Peeper stem by Discord Components. Designed and made in the USA with wide dirt drop handlebars in mind.',
         category: 'Components',
@@ -206,7 +206,7 @@
       },
       {
         id: '2f17d3f1-4f97-4bb0-9d38-934a81975627', 
-        user_id: '90ac3319-70d1-4a51-b91d-ba6c2464408c',       
+        public_id: '90ac3319-70d1-4a51-b91d-ba6c2464408c',       
         item_name: 'Rene Herse cranks',
         description:'Hello these are brand new never ridden XX1 take-off cranks. They are 170mm 34T Boost. You are purchasing from Flat Tire Co. Bike Shop, DM for questions.',
         category: 'Components',
@@ -217,7 +217,7 @@
       },
       {
         id: '1dfaca2e-5b57-437c-b5bc-6e49b69dd753',  
-        user_id: '90ac3319-70d1-4a51-b91d-ba6c2464408c',     
+        public_id: '4e26bde8-cf80-4485-a437-56c1c5f1f730',     
         item_name: 'Team Yo Eddy frame and fork',
         description:'Selling my Team Yo Eddy frame and fork. In good condition.Bike Shop, free shipping in the US. DM for questions. Size XL Karate Monkey includes frame and fork.',
         category: 'Components',
@@ -228,7 +228,7 @@
       },
       {
         id: '90d1c0ae-dfea-436f-a3a3-a2599dc9545a',  
-        user_id: '90ac3319-70d1-4a51-b91d-ba6c2464408c',  
+        public_id: '4e26bde8-cf80-4485-a437-56c1c5f1f730',  
         item_name: 'Wolf Tooth seatpost collar',
         description:'Both are brand new and never used. Bought these for a bike that Im selling still running smooth. Designed and made in the USA. DM me for details',
         category: 'Components',

@@ -27,6 +27,18 @@ const getAllProduct = async (_req, res) => {
   try {
     const productData = await db("product")
       .orderBy('created_at', 'desc')
+      .select(
+        "id",
+        "public_id",
+        "item_name",
+        "description",
+        "category",
+        "image_path",
+        "price",
+        "user_name",
+        "created_at",
+        "updated_at"
+      )
     res.status(200).json(productData);
   } catch (error) {
     res.status(500).json({ error: error });
@@ -38,6 +50,18 @@ const getComponents = async (_req, res) => {
   try {
     const componentData = await db("product")
       .where({ category: 'Components' })
+      .select(
+        "id",
+        "public_id",
+        "item_name",
+        "description",
+        "category",
+        "image_path",
+        "price",
+        "user_name",
+        "created_at",
+        "updated_at"
+      )
     res.status(200).json(componentData);
   } catch (error) {
     res.status(500).json({ error: error });
@@ -49,6 +73,18 @@ const getBikes = async (_req, res) => {
   try {
     const componentData = await db("product")
       .where({ category: 'Bikes' })
+      .select(
+        "id",
+        "public_id",
+        "item_name",
+        "description",
+        "category",
+        "image_path",
+        "price",
+        "user_name",
+        "created_at",
+        "updated_at"
+      )
     res.status(200).json(componentData);
   } catch (error) {
     res.status(500).json({ error: error });
@@ -68,6 +104,7 @@ const addProductItem = async (req, res) => {
       !req.body.category ||
       !req.body.price ||
       !req.body.user_name ||
+      !req.body.public_id ||
       !req.body.user_email
     ) {
       return res.status(400).json({
@@ -91,6 +128,7 @@ const addProductItem = async (req, res) => {
         price: req.body.price,
         image_path: req.file.path,
         user_email: req.body.user_email,
+        public_id: req.body.public_id,
         user_name: req.body.user_name
       });
       return res.status(201).json({ message: "Product created" });
@@ -106,7 +144,18 @@ const addProductItem = async (req, res) => {
 //handler function to get product by ID
 const getProductById = async (req, res) => {
   try {
-    const productData = await db("product").where({ id: req.params.id });
+    const productData = await db("product").where({ id: req.params.id })
+    .select(
+      "id",
+      "item_name",
+      "description",
+      "category",
+      "image_path",
+      "price",
+      "user_name",
+      "created_at",
+      "updated_at"
+    )
     res.status(200).json(productData[0]);
   } catch (error) {
     res.status(500).json({ error: error });
