@@ -5,14 +5,15 @@ const uuid4 = require("uuid4");
 
 const saveMessage = async (req, res) => {
   //Retrieve data from request body.
-  const { user_name, message, room, email, product_id } = req.body;
+  const { user_name, message, room, email, product_id, public_id } = req.body;
   // Validate form inputs
   if (
     !user_name ||
     !message ||
     !room ||
     !email ||
-    !product_id
+    !product_id ||
+    !public_id
   ) {
     return res.status(400).json({
       message: 'All fields are required.'
@@ -27,6 +28,7 @@ const saveMessage = async (req, res) => {
         message: message,
         product_id: product_id,
         user_name: user_name,
+        public_id: public_id,
         room: room,
         email: email,
       });
@@ -83,12 +85,12 @@ const getFirstMessagesByProductId = async (req, res) => {
 
 const getFirstBuyMessageByEmail = async (req, res) => {
   try {
-    const emails = req.params.email;
+    const publicId = req.params.publicId;
 
     // Retrieve all rooms associated with the product ID
     const rooms = await db("chat")
       .select("room")
-      .where({ email: emails })
+      .where({ 'chat.public_id': publicId })
       .groupBy("room");
 
     const messages = [];
@@ -96,7 +98,7 @@ const getFirstBuyMessageByEmail = async (req, res) => {
     for (const room of rooms) {
 
       const message = await db("chat")
-        .where({ email: emails, room: room.room })
+        .where({ 'chat.public_id': publicId, room: room.room })
         .join("product", { "chat.product_id": "product.id" })
         .select(
           "item_name",
@@ -112,11 +114,12 @@ const getFirstBuyMessageByEmail = async (req, res) => {
         .orderBy("chat.created_at", "asc")
         .first();
         //conditional if product owner matches message email then don't push to messages array.
-        if (message.user_email !== message.email) {
+        if (message.email !== message.user_email) {
           messages.push(message);
         }  
     }
-
+    delete messages[0]?.email;
+    delete messages[0]?.user_email;
     res.status(200).json(messages);
   } catch (error) {
     res.status(500).json({ error: error });
@@ -126,12 +129,12 @@ const getFirstBuyMessageByEmail = async (req, res) => {
 
 const getFirstSellMessageByEmail = async (req, res) => {
   try {
-    const email = req.params.email;
+    const publicId = req.params.publicId;
 
     // Retrieve all product IDs associated with the email
     const products = await db("product")
       .select("chat.room")
-      .where({ user_email: email })
+      .where({ 'product.public_id': publicId })
       .join("chat", "product.id", "=", "chat.product_id")
       .orderBy("chat.created_at", "asc");
 
