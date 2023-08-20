@@ -156,14 +156,16 @@ const getFirstSellMessageByEmail = async (req, res) => {
             "product_id",
             "chat.created_at"
           )
+          .orderBy("chat.created_at", "asc")
           .first();
         messages.push(message);
         visitedRooms.add(chat.room); // Mark room as visited
       }
     }
-
+    
     // Filter out any messages with null value
     const filteredMessages = messages.filter((message) => message != null);
+    
     res.status(200).json(filteredMessages);
   } catch (error) {
     res.status(500).json({ error: error });
