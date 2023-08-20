@@ -153,6 +153,7 @@ const getProductById = async (req, res) => {
       "image_path",
       "price",
       "user_name",
+      "public_id",
       "created_at",
       "updated_at"
     )

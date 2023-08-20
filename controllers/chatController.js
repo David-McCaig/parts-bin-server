@@ -118,7 +118,7 @@ const getFirstBuyMessageByEmail = async (req, res) => {
           messages.push(message);
         }  
     }
-    delete messages[0]?.email;
+     
     delete messages[0]?.user_email;
     res.status(200).json(messages);
   } catch (error) {
