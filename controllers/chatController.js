@@ -83,7 +83,7 @@ const getFirstMessagesByProductId = async (req, res) => {
   }
 };
 
-const getFirstBuyMessageByEmail = async (req, res) => {
+const getFirstBuyMessageByPublicId = async (req, res) => {
   try {
     const publicId = req.params.publicId;
 
@@ -120,6 +120,7 @@ const getFirstBuyMessageByEmail = async (req, res) => {
     }
      
     delete messages[0]?.user_email;
+    delete messages[0]?.email;
     res.status(200).json(messages);
   } catch (error) {
     res.status(500).json({ error: error });
@@ -127,7 +128,7 @@ const getFirstBuyMessageByEmail = async (req, res) => {
 };
 
 
-const getFirstSellMessageByEmail = async (req, res) => {
+const getFirstSellMessageByPublicId = async (req, res) => {
   try {
     const publicId = req.params.publicId;
 
@@ -176,6 +177,6 @@ module.exports = {
   saveMessage,
   getChatByRoom,
   getFirstMessagesByProductId,
-  getFirstSellMessageByEmail,
-  getFirstBuyMessageByEmail
+  getFirstSellMessageByPublicId,
+  getFirstBuyMessageByPublicId
 }

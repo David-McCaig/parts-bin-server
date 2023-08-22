@@ -12,9 +12,9 @@ router.get('/:room', chatController.getChatByRoom);
 
 router.get('/product/:product_id', chatController.getFirstMessagesByProductId);
 
-router.get('/buy/:publicId' , chatController.getFirstBuyMessageByEmail);
+router.get('/buy/:publicId' , chatController.getFirstBuyMessageByPublicId);
 
-router.get('/sell/:publicId' , chatController.getFirstSellMessageByEmail)
+router.get('/sell/:publicId' , chatController.getFirstSellMessageByPublicId)
 
 // router.get('/test/:email', chatController.getAllInventory)
 
